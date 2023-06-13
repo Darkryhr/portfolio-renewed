@@ -1,0 +1,19 @@
+@use '../utils/variables' as v;
+
+.btn {
+  padding: 1em;
+  color: v.$light-primary;
+  // transition: transform 0.15s ease;
+  a {
+    svg {
+      transition: all 0.3s ease;
+    }
+  }
+  &:hover {
+    a {
+      svg {
+        fill: v.$accent;
+      }
+    }
+  }
+}

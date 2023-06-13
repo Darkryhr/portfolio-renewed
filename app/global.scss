@@ -1,0 +1,260 @@
+@use '../utils/variables' as v;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 0;
+
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  color: v.$light-primary;
+  overflow-x: hidden;
+  background-color: v.$dark-primary;
+  position: relative;
+}
+
+// body::before,
+// body::after {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   content: '';
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+//   opacity: 2%;
+// }
+
+// body::before {
+//   background: v.$dark-primary;
+//   background: url(../public/bg.svg);
+//   background-size: cover;
+//   background-position: center;
+// }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0.001em;
+  background-color: transparent;
+}
+
+/* Optional: Add some padding to the scrollbar area */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Optional: Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.main__heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Kanit';
+  font-weight: 900;
+  line-height: 77%;
+  font-size: 5rem;
+  font-kerning: none;
+  cursor: default;
+  @include v.respond-to('small') {
+    font-size: 7rem;
+  }
+  span {
+    opacity: 0;
+    scale: 0.3;
+  }
+}
+
+.lead {
+  color: v.$accent;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  .hero__section & {
+    margin-bottom: 1.5em !important;
+  }
+}
+
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border: none;
+  min-width: 200px;
+  // padding: 0.7em 1.6em 0.7em 1.6em;
+  padding: 14px 30px;
+  line-height: 1;
+  cursor: pointer;
+  width: auto;
+}
+
+.primary {
+  background-color: v.$accent;
+  // &:hover {
+  //   letter-spacing: 0.05em;
+  // }
+}
+
+.secondary {
+  outline: 1px solid v.$accent;
+  outline-offset: -2px;
+  color: v.$accent;
+  position: relative;
+  &::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background-color: v.$accent;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.icon__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 22px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 4em;
+  padding-bottom: 6em;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  h1 {
+    margin-bottom: 3rem;
+  }
+  > p {
+    margin-bottom: 3em;
+    text-align: center;
+    max-width: 67%;
+  }
+}
+
+.static__noise {
+  z-index: -1;
+  opacity: 25%;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 50px);
+  height: calc(100% + 50px);
+  background: repeating-linear-gradient(
+    #101111,
+    #101111 50%,
+    #2d2c2c 50%,
+    #2d2c2c
+  );
+  background-repeat: repeat;
+
+  background-size: 5px 5px;
+  filter: url(#noise);
+}
+
+.static__svg {
+  width: 0;
+  height: 0;
+}

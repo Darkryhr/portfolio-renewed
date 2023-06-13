@@ -1,0 +1,114 @@
+@use '../utils/variables' as v;
+
+.button__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  > * {
+    width: 200px;
+  }
+  > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  @include v.respond-to('small') {
+    flex-direction: row;
+
+    > *:not(:last-child) {
+      margin-bottom: 0rem;
+
+      margin-right: 1rem;
+    }
+  }
+}
+
+.hero__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: calc(100vh - 92px);
+  position: relative;
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .para {
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.social__sidebar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  list-style: none;
+  display: none;
+  @include v.respond-to('small') {
+    display: block;
+  }
+}
+
+.hero__background {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  opacity: 33%;
+  > * {
+    margin: 0 auto;
+  }
+
+  .skullTop {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: hoverAnimationTop 5s ease-in-out infinite;
+  }
+  .skullBottom {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: hoverAnimationBottom 5s ease-in-out infinite;
+  }
+}
+
+@keyframes hoverAnimationTop {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: calc(10% - 10px);
+  }
+  100% {
+    top: 10%;
+  }
+}
+
+@keyframes hoverAnimationBottom {
+  0% {
+    bottom: 9%;
+  }
+  50% {
+    bottom: calc(9% - 10px);
+  }
+  100% {
+    bottom: 9%;
+  }
+}

@@ -1,0 +1,147 @@
+@use '../utils/variables' as v;
+
+.blog__grid {
+  display: grid;
+  grid-gap: 1.3rem;
+  width: 100%;
+  max-width: 1200px;
+
+  grid-template-areas:
+    'merged'
+    'cell1'
+    'cell2'
+    'cell3';
+
+  @include v.respond-to('small') {
+    grid-template-columns: 1fr 1fr; /* Two equal-sized columns */
+
+    grid-template-areas:
+      'merged merged'
+      'cell1 cell2'
+      'cell1 cell3';
+  }
+
+  .merged__cell {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: v.$dark-secondary;
+    grid-area: merged;
+    height: 250px;
+
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    h4 {
+      font-weight: 900;
+      font-size: 1.5em;
+      line-height: 1;
+      z-index: 1;
+      @include v.respond-to('small') {
+        font-size: 2.5em;
+      }
+    }
+    p {
+      z-index: 1;
+      margin-bottom: 0.5em !important;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 60%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.8)
+      );
+      z-index: 0;
+    }
+    @include v.respond-to('small') {
+      height: 330px;
+    }
+  }
+
+  .cell {
+    border-radius: 5px;
+
+    background-position: center center;
+    background-size: cover;
+    background-color: v.$dark-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    height: 250px;
+
+    h4 {
+      z-index: 1;
+      font-weight: 900;
+      font-size: 1.5em;
+      line-height: 1;
+    }
+    p {
+      z-index: 1;
+      margin-bottom: 0.5em !important;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 70%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.8)
+      );
+      z-index: 0;
+    }
+    @include v.respond-to('small') {
+      height: 320px;
+    }
+  }
+
+  .cell:nth-child(1) {
+    grid-area: cell1;
+  }
+
+  .cell:nth-child(2) {
+    grid-area: cell2;
+  }
+
+  .cell:nth-child(3) {
+    grid-area: cell3;
+  }
+}
+
+.blog__button {
+  margin-top: 1.2em;
+  border: 1px solid v.$accent;
+  z-index: 1;
+  color: v.$light-primary;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  svg {
+    margin-left: 5px;
+  }
+  &:hover {
+    color: v.$dark-primary;
+    background: v.$accent;
+  }
+}

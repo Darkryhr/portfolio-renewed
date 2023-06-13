@@ -1,0 +1,163 @@
+@use '../utils/variables' as v;
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+
+  p {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  div {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    max-width: 140px;
+    margin-right: 0;
+  }
+
+  @include v.respond-to('small') {
+    flex-direction: row;
+    align-items: flex-start;
+
+    p {
+      text-align: start;
+      margin: 0;
+    }
+    div {
+      max-width: 240px;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.background__stroke {
+  fill: #ca5310;
+  width: 700px;
+  top: -2rem;
+  border-radius: 999px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  // width: 100%;
+  @include v.respond-to('small') {
+    width: 1000px;
+  }
+}
+
+.skill__wrapper {
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(377px, 1fr));
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 5em;
+
+  .divider {
+    padding-top: 2rem;
+    width: 1px;
+    height: inherit;
+    background: v.$dark-secondary;
+  }
+  @include v.respond-to('small') {
+    margin-top: 7em;
+  }
+}
+
+.skill__column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding-bottom: 7em;
+  margin: 0 auto;
+  position: relative;
+
+  svg {
+    color: v.$accent;
+  }
+  h3 {
+    color: v.$light-primary;
+    // color: v.$accent;
+
+    font-family: 'Kanit';
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2em;
+    position: relative;
+    padding: 0.7em 0 0.5em 0;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 1px;
+      width: 75%;
+      opacity: 0.3;
+      background: v.$light-primary;
+    }
+  }
+  ul {
+    list-style: none;
+    font-weight: 400;
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .skill__header {
+    padding-top: 0.7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    ul {
+      padding-top: 0.7em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    ul > li {
+      text-transform: none !important;
+      display: inline-block;
+      text-align: center;
+
+      margin-right: 5px;
+      background-color: v.$dark-secondary;
+      font-weight: 600;
+      font-size: 0.8em;
+      padding: 0.5em 0.85em;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  }
+  @include v.respond-to('small') {
+    &:not(:last-child)::before {
+      position: absolute;
+      content: '';
+      background: transparent;
+      border-right: 1px solid v.$dark-secondary;
+      width: 100%;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      z-index: -1;
+      border-radius: 5px;
+    }
+  }
+}

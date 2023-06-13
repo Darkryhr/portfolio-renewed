@@ -1,0 +1,46 @@
+@use '../utils/variables' as v;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  label {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: inherit;
+    border: none;
+    background-color: #505050;
+    margin-bottom: 1.5rem;
+    border-radius: 3px;
+    height: 44px;
+    padding-left: 0.6em;
+    color: v.$light-primary;
+  }
+
+  textarea {
+    width: inherit;
+    border: none;
+    background-color: #505050;
+    margin-bottom: 3.5rem;
+    border-radius: 3px;
+    color: v.$light-primary;
+    padding: 0.5em;
+  }
+}
+
+.form__wrapper {
+  background-color: v.$dark-secondary;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 4.5rem;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 6px;
+}
