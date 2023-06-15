@@ -1,6 +1,5 @@
 @use '../utils/variables' as v;
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -15,7 +14,6 @@
   padding: 0;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -29,19 +27,16 @@ dd {
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
   padding: 0;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -53,38 +48,16 @@ body {
   position: relative;
 }
 
-// body::before,
-// body::after {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   content: '';
-//   width: 100%;
-//   height: 100%;
-//   z-index: -1;
-//   opacity: 2%;
-// }
-
-// body::before {
-//   background: v.$dark-primary;
-//   background: url(../public/bg.svg);
-//   background-size: cover;
-//   background-position: center;
-// }
-
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -177,7 +150,6 @@ p {
   font-size: 0.9rem;
   border: none;
   min-width: 200px;
-  // padding: 0.7em 1.6em 0.7em 1.6em;
   padding: 14px 30px;
   line-height: 1;
   cursor: pointer;
@@ -186,9 +158,6 @@ p {
 
 .primary {
   background-color: v.$accent;
-  // &:hover {
-  //   letter-spacing: 0.05em;
-  // }
 }
 
 .secondary {
@@ -213,6 +182,10 @@ p {
   align-items: center;
   justify-content: center;
   padding-left: 22px;
+  a {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .wrapper {

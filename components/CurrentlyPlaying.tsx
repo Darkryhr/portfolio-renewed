@@ -1,23 +1,16 @@
+'use client';
+
 import React from 'react';
 
 import styles from '@/styles/Footer.module.scss';
 
-async function getSpotifyData() {}
-
-const CurrentlyPlaying = async () => {
-  const data = await getSpotifyData();
-
+export default async function CurrentlyPlaying() {
   return (
     <div className={styles.spotify}>
-      <p>
-        <span>Jammin&apos; Now — </span>
-        Thief in the Night
-      </p>
+      <p>Thief in the Night</p>
     </div>
   );
-};
-
-export default CurrentlyPlaying;
+}
 
 const PlayingBars = () => {
   return (

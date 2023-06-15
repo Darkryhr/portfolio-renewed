@@ -3,6 +3,7 @@ import React from 'react';
 import { FooterLogo } from '@/components/Icons';
 import SocialMenu from '@/components/SocialMenu';
 import styles from '@/styles/Footer.module.scss';
+import CurrentlyPlaying from './CurrentlyPlaying';
 
 const Footer = () => {
   return (

@@ -49,8 +49,10 @@ const Home = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
           >
-            <HiArrowSmDown size={18} />
-            See my resume
+            <a href='cv.pdf' download>
+              <HiArrowSmDown size={18} />
+              See my resume
+            </a>
           </motion.button>
         </div>
       </div>

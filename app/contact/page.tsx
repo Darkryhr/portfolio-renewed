@@ -2,18 +2,36 @@
 
 import React, { useState } from 'react';
 
-import SocialMenu from '@/components/SocialMenu';
 import styles from '@/styles/Contact.module.scss';
-import { BgStroke } from '../about/page';
 
 const ContactPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
+  const handleSubmit = async event => {
+    event.preventDefault();
 
-  const emailRegEx =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    };
+
+    const JSONdata = JSON.stringify(data);
+
+    const endpoint = '/api/contact';
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSONdata,
+    };
+
+    const response = await fetch(endpoint, options);
+
+    const result = await response.json();
+
+    console.log(result);
+  };
 
   return (
     <div className='wrapper'>
@@ -23,21 +41,20 @@ const ContactPage = () => {
         hit me up.
       </p>
       <div className={styles.form__wrapper}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor=''>Your Name*</label>
-          <input type='text' placeholder='Grunk Spink' />
+          <input required type='text' placeholder='Grunk Spink' name='name' />
           <label htmlFor=''>Email</label>
-          <input type='text' placeholder='pyramid@scheme.com' />
+          <input type='text' placeholder='pyramid@scheme.com' name='email' />
           <label htmlFor=''>Message</label>
           <textarea
-            name=''
-            id=''
             cols={30}
             rows={10}
             placeholder="What've you got to say for yourself?"
-          ></textarea>
+            name='message'
+          />
           <button type='submit' className='btn primary'>
-            Send
+            Sendd
           </button>
         </form>
       </div>
