@@ -30,7 +30,7 @@
   padding-top: 4em;
   padding-left: 2rem;
   padding-right: 2rem;
-  min-height: calc(100vh - 92px);
+  height: calc(100vh - 92px);
   position: relative;
   width: 100%;
 
@@ -80,15 +80,22 @@
     left: 50%;
     transform: translateX(-50%);
     animation: hoverAnimationTop 5s ease-in-out infinite;
+
+    @include v.respond-to('small') {
+    }
   }
   .skullBottom {
     position: absolute;
     width: 20em;
     height: 20em;
-    bottom: 9%;
+    top: 59%;
     left: 50%;
     transform: translateX(-50%);
     animation: hoverAnimationBottom 5s ease-in-out infinite;
+
+    @include v.respond-to('small') {
+      top: 55%;
+    }
   }
 }
 
