@@ -46,6 +46,12 @@ body {
   background-color: v.$dark-primary;
   position: relative;
   overflow-x: hidden;
+  p {
+    font-family: Poppins, Arial, sans-serif;
+  }
+  span {
+    font-family: Poppins, Arial, sans-serif;
+  }
 }
 
 a:not([class]) {

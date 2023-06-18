@@ -44,12 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang='en'
-      className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className} ${myFont.className}`}
-    >
+    <html lang='en'>
       <body
-        className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className} ${myFont.className}`}
+        className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className}`}
       >
         <div className='static__noise'></div>
         <Header />
