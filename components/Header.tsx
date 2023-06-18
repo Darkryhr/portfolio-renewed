@@ -88,7 +88,6 @@ const Header = () => {
         >
           <div></div>
           <div></div>
-          <div></div>
         </button>
         <div
           className={`${styles.mobile__menu} ${

@@ -266,7 +266,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .active {
     color: v.$accent;
@@ -325,17 +325,13 @@
     transform-origin: center center;
 
     &:nth-of-type(1) {
-      top: 20%;
+      top: 33.33%;
       transform: translateY(-50%);
       transition: ease 0.3s all;
     }
+
     &:nth-of-type(2) {
-      bottom: 50%;
-      transform: translateY(50%);
-      transition: ease 0.3s all;
-    }
-    &:nth-of-type(3) {
-      bottom: 20%;
+      bottom: 33.33%;
       transform: translateY(50%);
       transition: ease 0.3s all;
     }
@@ -346,10 +342,8 @@
       &:nth-of-type(1) {
         animation: closeTop 0.5s forwards;
       }
+
       &:nth-of-type(2) {
-        opacity: 0;
-      }
-      &:nth-of-type(3) {
         animation: closeBottom 0.5s forwards;
       }
     }
@@ -360,10 +354,8 @@
       &:nth-of-type(1) {
         animation: openTop 0.5s forwards;
       }
+
       &:nth-of-type(2) {
-        opacity: 100%;
-      }
-      &:nth-of-type(3) {
         animation: openBottom 0.5s forwards;
       }
     }
@@ -375,27 +367,27 @@
     transform: translateY(0) rotate(0);
   }
   40% {
-    transform: translateY(900%) rotate(0);
+    transform: translateY(500%) rotate(0);
   }
   60% {
-    transform: translateY(900%) rotate(0);
+    transform: translateY(500%) rotate(0);
   }
   100% {
-    transform: translateY(900%) rotate(45deg);
+    transform: translateY(500%) rotate(45deg);
     animation-timing-function: ease-out;
   }
 }
 
 @keyframes openTop {
   0% {
-    transform: translateY(900%) rotate(45deg);
+    transform: translateY(500%) rotate(45deg);
     animation-timing-function: ease-in;
   }
   40% {
-    transform: translateY(900%) rotate(0);
+    transform: translateY(500%) rotate(0);
   }
   60% {
-    transform: translateY(900%) rotate(0);
+    transform: translateY(500%) rotate(0);
   }
   100% {
     transform: translateY(0) rotate(0);
@@ -407,27 +399,27 @@
     transform: translateY(0) rotate(0);
   }
   40% {
-    transform: translateY(-900%) rotate(0);
+    transform: translateY(-500%) rotate(0);
   }
   60% {
-    transform: translateY(-900%) rotate(0);
+    transform: translateY(-500%) rotate(0);
   }
   100% {
-    transform: translateY(-900%) rotate(-45deg);
+    transform: translateY(-500%) rotate(-45deg);
     animation-timing-function: ease-out;
   }
 }
 
 @keyframes openBottom {
   0% {
-    transform: translateY(-900%) rotate(-45deg);
+    transform: translateY(-500%) rotate(-45deg);
     animation-timing-function: ease-in;
   }
   40% {
-    transform: translateY(-900%) rotate(0);
+    transform: translateY(-500%) rotate(0);
   }
   60% {
-    transform: translateY(-900%) rotate(0);
+    transform: translateY(-500%) rotate(0);
   }
   100% {
     transform: translateY(0) rotate(0);

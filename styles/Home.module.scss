@@ -79,8 +79,8 @@
 
   .skullTop {
     position: absolute;
-    width: 29rem;
-    height: 29rem;
+    width: 25rem;
+    height: 25rem;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -93,15 +93,17 @@
   }
   .skullBottom {
     position: absolute;
-    width: 20rem;
-    height: 20rem;
-    top: 60%;
+    width: 17rem;
+    height: 17rem;
+    top: 50%;
 
     left: 50%;
     transform: translateX(-50%);
     animation: hoverAnimationBottom 5s ease-in-out infinite;
 
     @include v.respond-to('small') {
+      width: 20rem;
+      height: 20rem;
       top: 55%;
     }
   }
