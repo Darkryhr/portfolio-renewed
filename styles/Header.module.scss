@@ -1,6 +1,7 @@
 @use '../utils/variables' as v;
 
 .header {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +9,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 1.5em 1.2em 1.2em 1.2em;
+  width: 100%;
 
   @include v.respond-to('small') {
     padding: 1.875em 1.6em 1.6em 1.6em;
@@ -21,6 +23,7 @@
   z-index: 99;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
+  width: 100%;
 }
 
 .scrolled {
@@ -278,6 +281,7 @@
 
 .closed {
   opacity: 0;
+  display: none;
   transform: translateX(100%);
 }
 
