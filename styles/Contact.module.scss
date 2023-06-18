@@ -36,14 +36,15 @@
 
 .form__wrapper {
   background-color: v.$dark-secondary;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
   padding-bottom: 4.5rem;
-  width: 100%;
-  max-width: 700px;
-  border-radius: 6px;
+  width: 100vw;
   @include v.respond-to('small') {
+    max-width: 700px;
+    border-radius: 6px;
+
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     padding-top: 2.5rem;
