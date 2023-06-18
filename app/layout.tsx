@@ -48,7 +48,9 @@ export default function RootLayout({
       lang='en'
       className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className} ${myFont.className}`}
     >
-      <body>
+      <body
+        className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className} ${myFont.className}`}
+      >
         <div className='static__noise'></div>
         <Header />
         <main
