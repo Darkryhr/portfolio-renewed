@@ -81,14 +81,13 @@
     position: absolute;
     width: 25rem;
     height: 25rem;
-    top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    animation: hoverAnimationTop 5s ease-in-out infinite;
+    animation: hoverAnimationBottom 5s ease-in-out infinite;
 
     @include v.respond-to('small') {
-      width: 31.25rem;
-      height: 31.25rem;
+      width: 40rem;
+      height: 40rem;
     }
   }
   .skullBottom {
@@ -127,12 +126,12 @@
 
 @keyframes hoverAnimationBottom {
   0% {
-    bottom: 9%;
+    bottom: -40px;
   }
   50% {
-    bottom: calc(9% - 10px);
+    bottom: -80px;
   }
   100% {
-    bottom: 9%;
+    bottom: -40px;
   }
 }

@@ -60,13 +60,6 @@ const Home = () => {
         <div className={styles.skullTop}>
           <Image src='/skullpoly-top.svg' fill={true} alt='Picture of penis' />
         </div>
-        <div className={styles.skullBottom}>
-          <Image
-            src='/skullpoly-bottom.svg'
-            fill={true}
-            alt='Picture of penis'
-          />
-        </div>
       </div>
     </>
   );
