@@ -9,8 +9,6 @@
   position: relative;
   padding: 3rem 30px 2.5rem 30px;
   width: 100%;
-  @include v.respond-to('small') {
-  }
 
   &::before {
     content: '';

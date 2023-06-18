@@ -118,7 +118,6 @@ p {
   text-align: center;
   text-transform: uppercase;
   font-family: Kanit, Kanit Black, Arial, Helvetica, sans-serif;
-  letter-spacing: -5px;
   font-weight: 900;
   line-height: 77%;
   font-size: 4rem;
@@ -204,6 +203,7 @@ p {
     margin-bottom: 1em;
     text-align: center;
     max-width: 100%;
+    line-height: normal;
   }
   @include v.respond-to('small') {
     h1 {
