@@ -17,8 +17,8 @@
 
     grid-template-areas:
       'merged merged'
-      'cell1 cell2'
-      'cell1 cell3';
+      'cell2 cell1'
+      'cell3 cell1';
   }
 
   .merged__cell {
@@ -115,7 +115,7 @@
   }
 
   .cell:nth-child(1) {
-    grid-area: cell1;
+    grid-area: cell3;
   }
 
   .cell:nth-child(2) {
@@ -123,7 +123,7 @@
   }
 
   .cell:nth-child(3) {
-    grid-area: cell3;
+    grid-area: cell1;
   }
 }
 

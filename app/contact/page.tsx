@@ -1,17 +1,27 @@
 'use client';
 
 import React, { useState } from 'react';
+import { BiLoaderAlt } from 'react-icons/bi';
 
 import styles from '@/styles/Contact.module.scss';
 
 const ContactPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const emailRegEx =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   const handleSubmit = async event => {
     event.preventDefault();
+    setLoading(true);
 
-    const data = {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      message: event.target.message.value,
+    let data = {
+      name,
+      email,
+      message,
     };
 
     const JSONdata = JSON.stringify(data);
@@ -26,11 +36,12 @@ const ContactPage = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
+    await fetch(endpoint, options);
 
-    const result = await response.json();
-
-    console.log(result);
+    setName('');
+    setEmail('');
+    setMessage('');
+    setLoading(false);
   };
 
   return (
@@ -43,18 +54,52 @@ const ContactPage = () => {
       <div className={styles.form__wrapper}>
         <form className={styles.form} onSubmit={handleSubmit}>
           <label htmlFor=''>Your Name*</label>
-          <input required type='text' placeholder='Grunk Spink' name='name' />
+          <input
+            required
+            type='text'
+            placeholder='Grunk Spink'
+            name='name'
+            value={name}
+            onChange={e => {
+              setName(e.target.value);
+            }}
+          />
           <label htmlFor=''>Email</label>
-          <input type='text' placeholder='pyramid@scheme.com' name='email' />
+          <input
+            type='text'
+            placeholder='pyramid@scheme.com'
+            name='email'
+            value={email}
+            onChange={e => {
+              setEmail(e.target.value);
+            }}
+          />
           <label htmlFor=''>Message</label>
           <textarea
             cols={30}
             rows={10}
             placeholder="What've you got to say for yourself?"
             name='message'
+            value={message}
+            onChange={e => {
+              setMessage(e.target.value);
+            }}
           />
-          <button type='submit' className='btn primary'>
-            Sendd
+          <button
+            type='submit'
+            className={`btn primary ${styles.submit}`}
+            disabled={loading || !name || !emailRegEx.test(email) || !message}
+          >
+            {loading ? (
+              <>
+                <span className={styles.loader}>
+                  <BiLoaderAlt size='14px' />
+                </span>
+                <span>Sending...</span>
+              </>
+            ) : (
+              <span>Send</span>
+            )}
           </button>
         </form>
       </div>

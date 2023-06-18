@@ -1,0 +1,50 @@
+@use '../utils/variables' as v;
+
+.post__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  .body__wrapper {
+    width: 100vw;
+    font-weight: 400;
+    background-color: #202020;
+    padding: 2em 2em 6em 2em;
+
+    h2 {
+      font-family: 'Kanit';
+      font-weight: 900;
+      color: v.$accent;
+      text-transform: uppercase;
+      font-size: 2em;
+      letter-spacing: 0.06rem;
+      margin-bottom: 0.2em;
+      margin-top: 1em;
+    }
+
+    @include v.respond-to('small') {
+      width: 100%;
+      max-width: 1000px;
+      padding: 3em 3em 7em 3em;
+    }
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+
+  img {
+    border-radius: 99px;
+    outline: 2px solid v.$dark-secondary;
+    outline-offset: 1px;
+    margin-right: 0.8em;
+  }
+  p {
+    margin-top: 0.2em;
+    font-weight: 500;
+    font-size: 0.95em;
+  }
+}
