@@ -1,5 +1,4 @@
 import { IBM_Plex_Mono, Kanit, Poppins } from 'next/font/google';
-import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';

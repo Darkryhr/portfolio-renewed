@@ -1,12 +1,18 @@
 'use client';
 
 import { motion, stagger, useAnimate } from 'framer-motion';
+import localFont from 'next/font/local';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useLayoutEffect } from 'react';
 import { HiArrowSmDown } from 'react-icons/hi';
 
 import styles from '@/styles/Home.module.scss';
-import Link from 'next/link';
+
+const myFont = localFont({
+  src: './Kanit-Black.ttf',
+  display: 'swap',
+});
 
 const Home = () => {
   const [scope, animate] = useAnimate();
@@ -23,7 +29,9 @@ const Home = () => {
   return (
     <>
       <div className={styles.hero__section}>
-        <p className='lead'>[life’s too short to be boring]</p>
+        <p className='lead' style={myFont.style}>
+          [life’s too short to be boring]
+        </p>
         <h1 className='main__heading' ref={scope}>
           {heading.map((char, i) => {
             if (char === '?') return <br key={i} />;

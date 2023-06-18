@@ -117,7 +117,8 @@ p {
 .main__heading {
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -5px;
   font-weight: 900;
   line-height: 77%;
   font-size: 4rem;
@@ -197,16 +198,20 @@ p {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   > p {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     max-width: 100%;
   }
   @include v.respond-to('small') {
+    h1 {
+      margin-bottom: 2rem;
+    }
     padding-top: 4em;
     p {
+      margin-bottom: 2em;
       max-width: 67%;
     }
   }
