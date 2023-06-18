@@ -152,7 +152,7 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const BgStroke = () => {
+const BgStroke = () => {
   return (
     <svg
       className={styles.background__stroke}
