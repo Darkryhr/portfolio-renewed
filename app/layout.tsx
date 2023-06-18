@@ -1,9 +1,15 @@
 import { IBM_Plex_Mono, Kanit, Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Metadata } from 'next';
 import './global.scss';
+
+const myFont = localFont({
+  src: './Kanit-Black.ttf',
+  display: 'swap',
+});
 
 const kanit = Kanit({
   weight: '900',
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className}`}
+      className={`${kanit.className} ${poppins.className} ${ibmPlexMono.className} ${myFont.className}`}
     >
       <body>
         <div className='static__noise'></div>

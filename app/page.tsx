@@ -29,10 +29,8 @@ const Home = () => {
   return (
     <>
       <div className={styles.hero__section}>
-        <p className='lead' style={myFont.style}>
-          [life’s too short to be boring]
-        </p>
-        <h1 className='main__heading' ref={scope}>
+        <p className='lead'>[life’s too short to be boring]</p>
+        <h1 className='main__heading' ref={scope} style={myFont.style}>
           {heading.map((char, i) => {
             if (char === '?') return <br key={i} />;
             return <motion.span key={i}>{char}</motion.span>;
