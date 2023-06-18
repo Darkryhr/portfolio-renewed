@@ -11,6 +11,7 @@
   padding: 1.5em 1.2em 1.2em 1.2em;
   width: 100%;
 
+  overflow-x: hidden;
   @include v.respond-to('small') {
     padding: 1.875em 1.6em 1.6em 1.6em;
   }
@@ -24,6 +25,7 @@
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .scrolled {
@@ -281,7 +283,6 @@
 
 .closed {
   opacity: 0;
-  display: none;
   transform: translateX(100%);
 }
 
