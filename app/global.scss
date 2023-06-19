@@ -34,11 +34,8 @@ body {
   background-color: v.$dark-primary;
   position: relative;
   overflow-x: hidden;
-  p,
-  label,
-  button,
-  a {
-    font-family: 'Poppins', Arial, sans-serif;
+  p {
+    font-family: Poppins, Arial, sans-serif;
   }
   h1 {
     font-family: 'Kanit', Arial, sans-serif;
@@ -142,7 +139,6 @@ p {
 }
 
 .btn {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;
