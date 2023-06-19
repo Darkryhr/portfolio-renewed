@@ -32,17 +32,10 @@
   padding-right: 2rem;
   position: relative;
   height: calc(100vh - 92px);
-
   width: 100%;
   p {
     text-align: center;
     margin-bottom: 1.5rem;
-  }
-  .para {
-    margin-top: 1.8rem;
-    margin-bottom: 2rem;
-    padding-left: 1em;
-    padding-right: 1em;
   }
   @include v.respond-to('small') {
     padding-top: 4em;

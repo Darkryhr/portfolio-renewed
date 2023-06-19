@@ -14,19 +14,6 @@
   padding: 0;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
@@ -49,8 +36,9 @@ body {
   p {
     font-family: Poppins, Arial, sans-serif;
   }
-  span {
-    font-family: Poppins, Arial, sans-serif;
+  h1 {
+    font-family: 'Kanit', Arial, sans-serif;
+    margin-bottom: 1rem;
   }
 }
 
@@ -85,7 +73,7 @@ button {
 
 p {
   font-weight: 400;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -123,7 +111,7 @@ p {
 .main__heading {
   text-align: center;
   text-transform: uppercase;
-  font-family: Kanit, Kanit Black, Arial, Helvetica, sans-serif;
+  font-family: 'Kanit', Arial, Helvetica, sans-serif;
   font-weight: 900;
   line-height: 77%;
   font-size: 4rem;
@@ -202,21 +190,18 @@ p {
   padding-bottom: 6em;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  h1 {
-    margin-bottom: 1rem;
+  h1.main__heading {
+    font-family: 'Kanit';
   }
+
   > p {
     margin-bottom: 1em;
     text-align: center;
     max-width: 100%;
-    line-height: normal;
   }
   @include v.respond-to('small') {
-    h1 {
-      margin-bottom: 2rem;
-    }
     padding-top: 4em;
-    p {
+    > p {
       margin-bottom: 2em;
       max-width: 67%;
     }

@@ -1,18 +1,12 @@
 'use client';
 
 import { motion, stagger, useAnimate } from 'framer-motion';
-import localFont from 'next/font/local';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useLayoutEffect } from 'react';
 import { HiArrowSmDown } from 'react-icons/hi';
 
 import styles from '@/styles/Home.module.scss';
-
-const myFont = localFont({
-  src: './Kanit-Black.ttf',
-  display: 'swap',
-});
 
 const Home = () => {
   const [scope, animate] = useAnimate();
@@ -30,13 +24,17 @@ const Home = () => {
     <>
       <div className={styles.hero__section}>
         <p className='lead'>[life’s too short to be boring]</p>
-        <h1 className='main__heading' ref={scope} style={myFont.style}>
+        <h1 className='main__heading' ref={scope}>
           {heading.map((char, i) => {
             if (char === '?') return <br key={i} />;
-            return <motion.span key={i}>{char}</motion.span>;
+            return (
+              <motion.span className='heading__span' key={i}>
+                {char}
+              </motion.span>
+            );
           })}
         </h1>
-        <p className={styles.para}>
+        <p>
           I’m a simple man
           <br />I want to make things that are memorable, and worth making
         </p>

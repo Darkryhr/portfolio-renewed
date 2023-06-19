@@ -22,7 +22,7 @@
   top: 0;
   z-index: 99;
   background-color: transparent;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
   width: 100%;
 }
 
@@ -94,7 +94,7 @@
     height: auto;
     margin-top: 3px;
     fill: v.$light-primary;
-    transition: ease 0.4s fill;
+    transition: ease 0.3s fill;
   }
   &:hover {
     svg {
@@ -151,7 +151,7 @@
   align-items: center;
   padding: 20vh 1.8em 1.2em 1.8em;
   transform-origin: center right;
-  transition: ease 0.5s all;
+  transition: ease 0.375s all;
   @include v.respond-to('small') {
     display: none;
   }
@@ -161,11 +161,10 @@
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
-    transition: ease 0.5s all;
-    // transition-delay: 0.5s;
+    transition: ease 0.4s all;
     .nav__mobile {
       a {
-        transition: ease 0.45s all;
+        transition: ease 0.4s all;
       }
     }
   }
@@ -327,24 +326,24 @@
     &:nth-of-type(1) {
       top: 33.33%;
       transform: translateY(-50%);
-      transition: ease 0.3s all;
+      transition: ease 0.2s all;
     }
 
     &:nth-of-type(2) {
       bottom: 33.33%;
       transform: translateY(50%);
-      transition: ease 0.3s all;
+      transition: ease 0.2s all;
     }
   }
   margin-bottom: 3px;
   &.close {
     div {
       &:nth-of-type(1) {
-        animation: closeTop 0.5s forwards;
+        animation: closeTop 0.35s forwards;
       }
 
       &:nth-of-type(2) {
-        animation: closeBottom 0.5s forwards;
+        animation: closeBottom 0.35s forwards;
       }
     }
   }
@@ -352,11 +351,11 @@
   &.open {
     div {
       &:nth-of-type(1) {
-        animation: openTop 0.5s forwards;
+        animation: openTop 0.35s forwards;
       }
 
       &:nth-of-type(2) {
-        animation: openBottom 0.5s forwards;
+        animation: openBottom 0.35s forwards;
       }
     }
   }
