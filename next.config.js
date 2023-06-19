@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compiler: {
-    styledComponents: true,
-  },
+  optimizeFonts: false,
   images: {
     domains: ['cdn.sanity.io'],
   },

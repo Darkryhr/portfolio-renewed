@@ -1,6 +1,5 @@
 import { IBM_Plex_Mono, Kanit, Poppins } from 'next/font/google';
 import localFont from 'next/font/local';
-import Head from 'next/head';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -38,6 +37,8 @@ export const metadata: Metadata = {
     images: '/og-image.png',
   },
 };
+
+console.log(kanit);
 
 export default function RootLayout({
   children,
