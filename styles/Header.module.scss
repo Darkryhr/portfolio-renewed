@@ -6,7 +6,6 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 100%;
   margin: 0 auto;
   padding: 1.5em 1.2em 1.2em 1.2em;
   width: 100%;
@@ -23,7 +22,6 @@
   z-index: 99;
   background-color: transparent;
   transition: background-color 0.25s ease-in-out;
-  width: 100%;
 }
 
 .scrolled {
@@ -39,9 +37,10 @@
     position: relative;
   }
   display: none;
+
   @include v.respond-to('small') {
     max-width: 500px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex: 1;
     display: flex;
     a {
@@ -67,6 +66,9 @@
         }
       }
     }
+  }
+  @include v.respond-to('medium') {
+    justify-content: space-evenly;
   }
 
   a.active {

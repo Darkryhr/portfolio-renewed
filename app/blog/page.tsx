@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { groq } from 'next-sanity';
 import Link from 'next/link';
 import React from 'react';
@@ -15,6 +16,10 @@ const query = groq`
 `;
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: 'Thought Cabinet',
+};
 
 export default async function BlogPage() {
   const posts = await client.fetch(query);
@@ -37,7 +42,7 @@ export default async function BlogPage() {
           }}
         >
           <DateFormatter dateString={posts[0]._createdAt} />
-          <h4>{posts[0].title}</h4>
+          <h4 style={kanit.style}>{posts[0].title}</h4>
           <Link
             href={'blog/' + posts[0]?.slug?.current}
             className={`btn ${styles.blog__button}`}
@@ -56,7 +61,7 @@ export default async function BlogPage() {
           >
             <DateFormatter dateString={post._createdAt} />
 
-            <h4>{post.title}</h4>
+            <h4 style={kanit.style}>{post.title}</h4>
             <Link
               href={'blog/' + post?.slug?.current}
               className={`btn ${styles.blog__button}`}

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import React from 'react';
 import { CgScreen } from 'react-icons/cg';
@@ -7,6 +8,10 @@ import { MdOutlineDesignServices } from 'react-icons/md';
 import BgStroke from '@/components/BgStroke';
 import styles from '@/styles/About.module.scss';
 import { kanit, poppins } from '../font';
+
+export const metadata: Metadata = {
+  title: 'Identity',
+};
 
 const AboutPage = () => {
   return (

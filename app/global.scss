@@ -33,12 +33,11 @@ body {
   background-color: v.$dark-primary;
   position: relative;
   overflow-x: hidden;
-  p {
-    font-family: Poppins, Arial, sans-serif;
-  }
   h1 {
     font-family: 'Kanit', Arial, sans-serif;
     margin-bottom: 1rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 
@@ -72,6 +71,7 @@ button {
 }
 
 p {
+  font-family: Poppins, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }

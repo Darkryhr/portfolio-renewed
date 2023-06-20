@@ -1,8 +1,13 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import PortfolioCard from '@/components/PortfolioCard';
 import styles from '@/styles/Portfolio.module.scss';
 import { kanit } from '../font';
+
+export const metadata: Metadata = {
+  title: 'Savoir Faire',
+};
 
 const projects = [
   {
@@ -68,6 +73,7 @@ const PortfolioPage = () => {
             desc={desc}
             repoHref={repoHref}
             liveDemoHref={liveDemoHref}
+            id={title + '_repoLink'}
           />
         ))}
       </div>

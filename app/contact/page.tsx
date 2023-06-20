@@ -1,10 +1,15 @@
 'use client';
 
+import { Metadata } from 'next';
 import React, { useState } from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
 
 import styles from '@/styles/Contact.module.scss';
 import { kanit } from '../font';
+
+export const metadata: Metadata = {
+  title: 'Lets chat',
+};
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -56,7 +61,7 @@ const ContactPage = () => {
       </p>
       <div className={styles.form__wrapper}>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <label htmlFor=''>Your Name*</label>
+          <label htmlFor='name'>Your Name*</label>
           <input
             required
             type='text'
@@ -67,7 +72,7 @@ const ContactPage = () => {
               setName(e.target.value);
             }}
           />
-          <label htmlFor=''>Email</label>
+          <label htmlFor='email'>Email</label>
           <input
             type='text'
             placeholder='pyramid@scheme.com'
@@ -77,7 +82,7 @@ const ContactPage = () => {
               setEmail(e.target.value);
             }}
           />
-          <label htmlFor=''>Message</label>
+          <label htmlFor='message'>Message</label>
           <textarea
             cols={30}
             rows={10}

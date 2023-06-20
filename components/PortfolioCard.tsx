@@ -8,7 +8,7 @@ import { kanit } from '@/app/font';
 import SocialButton from '@/components/SocialButton';
 import styles from '@/styles/Portfolio.module.scss';
 
-const PortfolioCard = ({ title, desc, liveDemoHref, repoHref, number }) => {
+const PortfolioCard = ({ title, desc, liveDemoHref, repoHref, number, id }) => {
   return (
     <div className={styles.card}>
       <span className={styles.enum}>0{number + 1}</span>
@@ -27,7 +27,7 @@ const PortfolioCard = ({ title, desc, liveDemoHref, repoHref, number }) => {
           </a>
         </button>
         <div className={styles.repo__btn}>
-          <SocialButton href={repoHref} id='githubp_link'>
+          <SocialButton href={repoHref} id={id}>
             <AiFillGithub size={24} />
           </SocialButton>
         </div>

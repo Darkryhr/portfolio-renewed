@@ -164,9 +164,6 @@ const Header = () => {
             <p>hello@gabriel-lellouche.com</p>
           </div>
           <div className={styles.lineLower}></div>
-          <div className={styles.mobile__menuLogo}>
-            <FooterLogo />
-          </div>
         </div>
       </div>
     </header>

@@ -1,4 +1,5 @@
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
+import { Metadata } from 'next';
 import { groq } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react';
@@ -23,6 +24,20 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params: { slug } }) {
+  const query = groq`
+    *[_type == 'post' && slug.current == $slug][0] {
+    title,
+  }
+  `;
+
+  const post = await client.fetch(query, { slug });
+
+  return {
+    title: post.title,
+  };
+}
+
 export default async function BlogPost({ params: { slug } }) {
   const query = groq`
   *[_type == 'post' && slug.current == $slug][0] {
@@ -39,7 +54,6 @@ export default async function BlogPost({ params: { slug } }) {
         <h1 className='main__heading' style={kanit.style}>
           {post.title}
         </h1>
-        {/* <DateFormatter dateString={post._createdAt} /> */}
         <div className={styles.author}>
           <Image
             src={urlFor(post.author.image).url()}
