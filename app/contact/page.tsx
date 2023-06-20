@@ -1,15 +1,10 @@
 'use client';
 
-import { Metadata } from 'next';
 import React, { useState } from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
 
 import styles from '@/styles/Contact.module.scss';
 import { kanit } from '../font';
-
-export const metadata: Metadata = {
-  title: 'Lets chat',
-};
 
 const ContactPage = () => {
   const [name, setName] = useState('');
