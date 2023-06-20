@@ -6,7 +6,7 @@ import { MdOutlineDesignServices } from 'react-icons/md';
 
 import BgStroke from '@/components/BgStroke';
 import styles from '@/styles/About.module.scss';
-import { kanit } from '../font';
+import { kanit, poppins } from '../font';
 
 const AboutPage = () => {
   return (
@@ -15,7 +15,7 @@ const AboutPage = () => {
         identity
       </h1>
       <p>Here I am, this is me.</p>
-      <div className={styles.about__card}>
+      <div className={styles.about__card} style={poppins.style}>
         <BgStroke />
         <div>
           <Image src='/skl.svg' fill={true} alt='Picture of penis' />
@@ -53,7 +53,7 @@ const AboutPage = () => {
       <div className={styles.skill__wrapper}>
         <div className={styles.skill__column}>
           <CgScreen size={32} />
-          <h3>frontend</h3>
+          <h3 style={kanit.style}>frontend</h3>
           <ul>
             <li className={styles.skill__header}>
               React
@@ -85,7 +85,7 @@ const AboutPage = () => {
 
         <div className={styles.skill__column}>
           <MdOutlineDesignServices size={30} />
-          <h3>design</h3>
+          <h3 style={kanit.style}>design</h3>
           <ul>
             <li className={styles.skill__header}>
               UI Design
@@ -121,7 +121,7 @@ const AboutPage = () => {
 
         <div className={styles.skill__column}>
           <FiServer size={30} />
-          <h3>backend</h3>
+          <h3 style={kanit.style}>backend</h3>
           <ul>
             <li className={styles.skill__header}>
               Node.js
