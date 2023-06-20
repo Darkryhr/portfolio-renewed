@@ -38,7 +38,6 @@ body {
     margin-bottom: 1rem;
     padding-left: 0.2em;
     padding-right: 0.2em;
-    overflow-x: hidden;
   }
 }
 
@@ -75,6 +74,15 @@ p {
   font-family: Poppins, Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
