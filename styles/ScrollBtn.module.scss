@@ -1,0 +1,23 @@
+@use '../utils/variables' as v;
+
+.scroll {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 10px;
+  margin: 1rem;
+  margin-bottom: 1.6rem;
+  width: 50px;
+  height: 50px;
+  padding: 2.2rem;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: v.$dark-primary;
+  outline: 1px solid v.$dark-secondary;
+  svg {
+    fill: v.$light-primary;
+  }
+}

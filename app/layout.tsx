@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ScrollToTop from '@/components/ScrollToTop';
 import { Metadata } from 'next';
 import { ibmPlexMono, kanit, poppins } from './font';
 import './global.scss';
@@ -71,6 +72,7 @@ export default function RootLayout({
           </filter>
         </svg>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );
