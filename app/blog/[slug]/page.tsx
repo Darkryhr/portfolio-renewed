@@ -60,5 +60,6 @@ export default async function BlogPost({ params: { slug } }) {
 const components: Partial<PortableTextReactComponents> = {
   block: {
     h2: ({ children }) => <h2 style={kanit.style}>{children}</h2>,
+    p: ({ children }) => <p style={poppins.style}>{children}</p>,
   },
 };

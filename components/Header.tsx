@@ -10,6 +10,7 @@ import {
 } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 
+import { poppins } from '@/app/font';
 import styles from '@/styles/Header.module.scss';
 import { FooterLogo, Logo } from './Icons';
 
@@ -156,7 +157,7 @@ const Header = () => {
               </MobileNavLink>
             </nav>
           </div>
-          <div className={styles.mobile__menuEmail}>
+          <div className={styles.mobile__menuEmail} style={poppins.style}>
             <h6>Email</h6>
             <p>hello@gabriel-lellouche.com</p>
           </div>
@@ -197,6 +198,7 @@ const MobileNavLink = ({ children, href, closeMenu }) => {
       href={href}
       className={isActive ? styles.active : ''}
       onClick={() => closeMenu()}
+      style={poppins.style}
     >
       {children}
     </Link>

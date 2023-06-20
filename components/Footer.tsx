@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { kanit } from '@/app/font';
 import { FooterLogo } from '@/components/Icons';
 import SocialMenu from '@/components/SocialMenu';
 import styles from '@/styles/Footer.module.scss';
@@ -7,7 +8,7 @@ import styles from '@/styles/Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.signature}>
+      <div className={styles.signature} style={kanit.style}>
         <p>
           <span>&copy;{new Date().getFullYear()}</span>
           <br />
