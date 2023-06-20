@@ -6,6 +6,7 @@ import { FiExternalLink } from 'react-icons/fi';
 import DateFormatter from '@/components/DateFormatter';
 import { client, urlFor } from '@/sanity/lib/client';
 import styles from '@/styles/Blog.module.scss';
+import { kanit } from '../font';
 
 const query = groq`
 *[_type == "post"] {
@@ -20,7 +21,9 @@ export default async function BlogPage() {
 
   return (
     <div className='wrapper'>
-      <h1 className='main__heading'>the thought cabinet</h1>
+      <h1 className='main__heading' style={kanit.style}>
+        the thought cabinet
+      </h1>
       <p>
         Never been a big talker, at least not about myself. But I think
         it&apos;s worth working on that, so if someone is interested in my

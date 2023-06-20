@@ -7,6 +7,7 @@ import React, { useLayoutEffect } from 'react';
 import { HiArrowSmDown } from 'react-icons/hi';
 
 import styles from '@/styles/Home.module.scss';
+import { kanit } from './font';
 
 const Home = () => {
   const [scope, animate] = useAnimate();
@@ -24,7 +25,7 @@ const Home = () => {
     <>
       <div className={styles.hero__section}>
         <p className='lead'>[life’s too short to be boring]</p>
-        <h1 className='main__heading' ref={scope}>
+        <h1 className='main__heading' ref={scope} style={kanit.style}>
           {heading.map((char, i) => {
             if (char === '?') return <br key={i} />;
             return (

@@ -6,11 +6,14 @@ import { MdOutlineDesignServices } from 'react-icons/md';
 
 import BgStroke from '@/components/BgStroke';
 import styles from '@/styles/About.module.scss';
+import { kanit } from '../font';
 
 const AboutPage = () => {
   return (
     <div className='wrapper'>
-      <h1 className='main__heading'>identity</h1>
+      <h1 className='main__heading' style={kanit.style}>
+        identity
+      </h1>
       <p>Here I am, this is me.</p>
       <div className={styles.about__card}>
         <BgStroke />

@@ -2,6 +2,7 @@ import React from 'react';
 
 import PortfolioCard from '@/components/PortfolioCard';
 import styles from '@/styles/Portfolio.module.scss';
+import { kanit } from '../font';
 
 const projects = [
   {
@@ -51,7 +52,9 @@ const projects = [
 const PortfolioPage = () => {
   return (
     <div className='wrapper'>
-      <h1 className='main__heading'>la savoir faire</h1>
+      <h1 className='main__heading' style={kanit.style}>
+        la savoir faire
+      </h1>
       <p>
         Here are some of the things I&apos;m proudest of making. Feel free to
         browse.

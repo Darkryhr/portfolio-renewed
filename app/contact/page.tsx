@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { BiLoaderAlt } from 'react-icons/bi';
 
 import styles from '@/styles/Contact.module.scss';
+import { kanit } from '../font';
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -46,7 +47,9 @@ const ContactPage = () => {
 
   return (
     <div className='wrapper'>
-      <h1 className='main__heading'>let&apos;s chat</h1>
+      <h1 className='main__heading' style={kanit.style}>
+        let&apos;s chat
+      </h1>
       <p>
         If you&apos;re hiring, or looking for someone, or just wanna talk even,
         hit me up.

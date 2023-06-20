@@ -3,6 +3,7 @@ import { groq } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react';
 
+import { kanit } from '@/app/font';
 import { client, urlFor } from '@/sanity/lib/client';
 import styles from '@/styles/BlogPost.module.scss';
 
@@ -35,7 +36,9 @@ export default async function BlogPost({ params: { slug } }) {
   return (
     <div className='wrapper'>
       <article className={styles.post__wrapper}>
-        <h1 className='main__heading'>{post.title}</h1>
+        <h1 className='main__heading' style={kanit.style}>
+          {post.title}
+        </h1>
         {/* <DateFormatter dateString={post._createdAt} /> */}
         <div className={styles.author}>
           <Image

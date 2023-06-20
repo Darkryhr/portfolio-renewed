@@ -1,10 +1,10 @@
 import clsx from 'clsx';
-import { IBM_Plex_Mono, Kanit, Poppins } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { Metadata } from 'next';
+import { ibmPlexMono, kanit, poppins } from './font';
 import './global.scss';
 
 const kanitLocal = localFont({
@@ -12,24 +12,6 @@ const kanitLocal = localFont({
   weight: '900',
   variable: '--font-kanit',
   display: 'swap',
-});
-
-const kanit = Kanit({
-  weight: '900',
-  subsets: ['latin'],
-  display: 'block',
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: ['500'],
-  subsets: ['latin'],
-  display: 'block',
-});
-
-const poppins = Poppins({
-  weight: ['300', '400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'block',
 });
 
 export const metadata: Metadata = {
@@ -69,12 +51,6 @@ export default function RootLayout({
           style={{
             paddingTop: '92px',
           }}
-          className={clsx(
-            kanitLocal.variable,
-            kanit.className,
-            poppins.className,
-            ibmPlexMono.className
-          )}
         >
           {children}
         </main>
