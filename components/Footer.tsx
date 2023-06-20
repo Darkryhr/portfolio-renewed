@@ -8,9 +8,9 @@ import styles from '@/styles/Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.signature} style={kanit.style}>
-        <p>
-          <span>&copy;{new Date().getFullYear()}</span>
+      <div className={styles.signature}>
+        <p style={kanit.style}>
+          <span style={kanit.style}>&copy;{new Date().getFullYear()}</span>
           <br />
           gabriel
           <br />
