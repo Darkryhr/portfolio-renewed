@@ -1,9 +1,9 @@
-import { PortableText } from '@portabletext/react';
+import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import { groq } from 'next-sanity';
 import Image from 'next/image';
 import React from 'react';
 
-import { kanit } from '@/app/font';
+import { kanit, poppins } from '@/app/font';
 import { client, urlFor } from '@/sanity/lib/client';
 import styles from '@/styles/BlogPost.module.scss';
 
@@ -49,10 +49,16 @@ export default async function BlogPost({ params: { slug } }) {
           />
           <p>by {post.author.name}</p>
         </div>
-        <div className={styles.body__wrapper}>
-          <PortableText value={post.body} />
+        <div className={styles.body__wrapper} style={poppins.style}>
+          <PortableText value={post.body} components={components} />
         </div>
       </article>
     </div>
   );
 }
+
+const components: Partial<PortableTextReactComponents> = {
+  block: {
+    h2: ({ children }) => <h2 style={kanit.style}>{children}</h2>,
+  },
+};

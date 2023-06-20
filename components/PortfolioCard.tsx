@@ -4,6 +4,7 @@ import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiArrowUpRight } from 'react-icons/fi';
 
+import { kanit } from '@/app/font';
 import SocialButton from '@/components/SocialButton';
 import styles from '@/styles/Portfolio.module.scss';
 
@@ -12,7 +13,7 @@ const PortfolioCard = ({ title, desc, liveDemoHref, repoHref, number }) => {
     <div className={styles.card}>
       <span className={styles.enum}>0{number + 1}</span>
       <div className={styles.text__content}>
-        <h3>{title}</h3>
+        <h3 style={kanit.style}>{title}</h3>
         <p>{desc}</p>
       </div>
       <div className={styles.btn__wrapper}>
