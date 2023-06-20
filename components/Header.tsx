@@ -69,9 +69,11 @@ const Header = () => {
       className={`${styles.sticky__wrapper} ${scrolled ? styles.scrolled : ''}`}
     >
       <div className={styles.header}>
-        <Link className={styles.logo} href='/'>
-          <Logo />
-        </Link>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <Logo />
+          </Link>
+        </div>
         <nav className={styles.nav}>
           <LandscapeNavLink href='portfolio'>Portfolio</LandscapeNavLink>
           <LandscapeNavLink href='blog'>Blog</LandscapeNavLink>

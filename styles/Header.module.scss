@@ -92,13 +92,15 @@
     width: 100%;
     max-width: 150px;
     height: auto;
-    margin-top: 3px;
+    margin-top: 2px;
     fill: v.$light-primary;
     transition: ease 0.3s fill;
   }
-  &:hover {
-    svg {
-      fill: v.$accent;
+  a {
+    &:hover {
+      svg {
+        fill: v.$accent;
+      }
     }
   }
 }
