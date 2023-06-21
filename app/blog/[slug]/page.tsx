@@ -64,13 +64,15 @@ export default async function BlogPost({ params: { slug } }) {
           <p style={poppins.style}>by {post.author.name}</p>
         </div>
         <div className={styles.body__wrapper} style={poppins.style}>
-          <div className={styles.img__wrapper}>
-            <Image
-              src={urlFor(post.mainImage).url()}
-              alt={post?.mainImage?.alt}
-              fill={true}
-            />
-          </div>
+          {post?.mainImage && (
+            <div className={styles.img__wrapper}>
+              <Image
+                src={urlFor(post.mainImage).url()}
+                alt={post?.mainImage?.alt}
+                fill={true}
+              />
+            </div>
+          )}
           <PortableText value={post.body} components={components} />
         </div>
       </article>
