@@ -48,7 +48,6 @@ export default async function BlogPost({ params: { slug } }) {
 
   const post = await client.fetch(query, { slug });
 
-  console.log(post);
   return (
     <div className='wrapper'>
       <article className={styles.post__wrapper}>
@@ -62,7 +61,7 @@ export default async function BlogPost({ params: { slug } }) {
             width={42}
             height={42}
           />
-          <p>by {post.author.name}</p>
+          <p style={poppins.style}>by {post.author.name}</p>
         </div>
         <div className={styles.body__wrapper} style={poppins.style}>
           <div className={styles.img__wrapper}>
