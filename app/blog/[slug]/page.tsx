@@ -48,6 +48,7 @@ export default async function BlogPost({ params: { slug } }) {
 
   const post = await client.fetch(query, { slug });
 
+  console.log(post);
   return (
     <div className='wrapper'>
       <article className={styles.post__wrapper}>
@@ -64,6 +65,13 @@ export default async function BlogPost({ params: { slug } }) {
           <p>by {post.author.name}</p>
         </div>
         <div className={styles.body__wrapper} style={poppins.style}>
+          <div className={styles.img__wrapper}>
+            <Image
+              src={urlFor(post.mainImage).url()}
+              alt={post?.mainImage?.alt}
+              fill={true}
+            />
+          </div>
           <PortableText value={post.body} components={components} />
         </div>
       </article>
