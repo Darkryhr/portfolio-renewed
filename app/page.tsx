@@ -65,7 +65,11 @@ const Home = () => {
       </div>
       <div className={styles.hero__background}>
         <div className={styles.skullTop}>
-          <Image src='/skullpoly-top.svg' fill={true} ='Picture of penis' />
+          <Image
+            src='/skullpoly-top.svg'
+            fill={true}
+            alt='floating background skull'
+          />
         </div>
       </div>
     </>
