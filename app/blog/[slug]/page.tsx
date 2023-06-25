@@ -57,7 +57,7 @@ export default async function BlogPost({ params: { slug } }) {
         <div className={styles.author}>
           <Image
             src={urlFor(post.author.image).url()}
-            alt={post.author.name}
+            alt={`${post.author.name} + "s Avatar`}
             width={42}
             height={42}
           />

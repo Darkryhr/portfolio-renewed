@@ -36,34 +36,36 @@ const Home = () => {
           })}
         </h1>
         <p>
-          I’m a simple man
-          <br />I want to make things that are memorable, and worth making
+          I&apos;m a simple man,
+          <br />I want to make things that are memorable, and worth making.
         </p>
         <div className={styles.button__wrapper}>
-          <motion.button
-            className='btn primary'
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-          >
-            <Link href='portfolio'>Check my stuff</Link>
-          </motion.button>
-          <motion.button
-            className='btn secondary icon__btn'
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-          >
-            <a href='cv.pdf' download>
+          <Link href='portfolio'>
+            <motion.button
+              className='btn primary'
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
+              Check my stuff
+            </motion.button>
+          </Link>
+          <a href='cv.pdf' download>
+            <motion.button
+              className='btn secondary icon__btn'
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
               <HiArrowSmDown size={18} />
               See my resume
-            </a>
-          </motion.button>
+            </motion.button>
+          </a>
         </div>
       </div>
       <div className={styles.hero__background}>
         <div className={styles.skullTop}>
-          <Image src='/skullpoly-top.svg' fill={true} alt='Picture of penis' />
+          <Image src='/skullpoly-top.svg' fill={true} ='Picture of penis' />
         </div>
       </div>
     </>

@@ -23,7 +23,7 @@ const AboutPage = () => {
       <div className={styles.about__card} style={poppins.style}>
         <BgStroke />
         <div>
-          <Image src='/skl.svg' fill={true} alt='Picture of penis' />
+          <Image src='/skl.svg' fill={true} alt='Skull-shaped Logo' />
         </div>
         <p>
           Nice to meet you faceless purely theoratical entity, the names

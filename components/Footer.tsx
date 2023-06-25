@@ -25,7 +25,7 @@ const Footer = () => {
         <p>
           try your best
           <br />
-          to like yourself.
+          to like yourself
         </p>
         <SocialMenu size={24} />
       </div>
