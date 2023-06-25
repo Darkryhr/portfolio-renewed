@@ -73,7 +73,7 @@ button {
 p {
   font-family: Poppins, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h1,
@@ -82,7 +82,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: balance;
+  letter-spacing: -1px;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -197,8 +197,8 @@ h6 {
   width: 100%;
   padding-top: 2em;
   padding-bottom: 5em;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   h1.main__heading {
     font-family: 'Kanit';
     margin-bottom: 2rem;
@@ -214,6 +214,8 @@ h6 {
     > p {
       margin-bottom: 2rem;
       max-width: 67%;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
     }
   }
 }
