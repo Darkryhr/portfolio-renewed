@@ -23,6 +23,12 @@ const projects = [
     repoHref: 'https://github.com/Darkryhr/nextfire-blog',
   },
   {
+    title: 'Antlers',
+    desc: 'One place from which to branch out, have all your links or other peoples links neatly organized and connected in one page.',
+    liveDemoHref: 'https://svelte-linktree.firebaseapp.com/',
+    repoHref: 'https://github.com/Darkryhr/sveltekit-links',
+  },
+  {
     title: 'Sightsee',
     desc: 'Pick your next vacation destination here, then tear up when you realize you cant afford it and have no one to go with, Im not projecting—you are.',
     liveDemoHref: 'https://clever-stonebraker-68587b.netlify.app/',
