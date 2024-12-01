@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 
 const projects = [
   {
+    title: 'AngleMart',
+    desc: 'Groceries are important, without them we die, they sustain us, also going to a physical location is wretched, now with technology we can make the process slightly less annoying.',
+    liveDemoHref: 'https://angular-firemart.firebaseapp.com/',
+    repoHref: 'https://github.com/Darkryhr/firemart',
+  },
+  {
     title: 'Urban Vikings',
     desc: "If clothes were still about survival we'd be wearing loinclothes and animal furs, finding something to wear that says something about yourself, and how much disposable income you have.",
     liveDemoHref: 'https://urban-vikings.vercel.app/',
@@ -40,12 +46,7 @@ const projects = [
     liveDemoHref: 'https://wonderful-goldstine-9fcc89.netlify.app/',
     repoHref: 'https://github.com/Darkryhr/firestarter',
   },
-  {
-    title: 'AngleMart',
-    desc: 'Groceries are important, without them we die, they sustain us, also going to a physical location is wretched, now with technology we can make the process slightly less annoying.',
-    liveDemoHref: 'https://angular-firemart.firebaseapp.com/',
-    repoHref: 'https://github.com/Darkryhr/firemart',
-  },
+
   {
     title: 'Lena Ozer',
     desc: 'I built my mom a blog, because somehow this seemed simpler than talking.',

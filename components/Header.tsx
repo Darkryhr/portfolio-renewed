@@ -75,8 +75,8 @@ const Header = () => {
           </Link>
         </div>
         <nav className={styles.nav}>
+          <LandscapeNavLink href='/'>Home</LandscapeNavLink>
           <LandscapeNavLink href='portfolio'>Portfolio</LandscapeNavLink>
-          <LandscapeNavLink href='blog'>Blog</LandscapeNavLink>
           <LandscapeNavLink href='about'>About</LandscapeNavLink>
         </nav>
         <div className={styles.cta__container}>
